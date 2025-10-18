@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Con tutto il mio cuore</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0f7fa; /* sfondo chiaro azzurrino */
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      flex-direction: column;
+    }
+
+    /* 💚 Cuore grande e color #006566 */
+    .heart {
+      position: relative;
+      width: 180px;
+      height: 160px;
+      background-color: #006566;
+      transform: rotate(-45deg);
+      animation: pulse 1.5s infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 160px;
+      background-color: #006566;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -90px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 90px;
+      top: 0;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1) rotate(-45deg); }
+      25% { transform: scale(1.1) rotate(-45deg); }
+      50% { transform: scale(1) rotate(-45deg); }
+      75% { transform: scale(1.1) rotate(-45deg); }
+      100% { transform: scale(1) rotate(-45deg); }
+    }
+
+    h1 {
+      margin-top: 60px;
+      font-size: 1.8em;
+      color: #004c4d;
+      text-align: center;
+    }
+
+    a {
+      margin-top: 30px;
+      text-decoration: none;
+      color: white;
+      background-color: #006566;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    a:hover {
+      background-color: #004c4d;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="heart"></div>
+  <h1>Con tutto il mio cuore 💜</h1>
+  <a href="index.html">← Torna indietro</a>
+</body>
+</html>
